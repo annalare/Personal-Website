@@ -438,3 +438,226 @@ footer .wrapper {
 li {
   list-style: none;
 }
+
+@media (min-width: 550px) {
+  :root {
+    --fs-base: 0.9rem;
+  }
+
+  .blog-card {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    gap: 20px;
+  }
+  .blog-card-banner {
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  .blog-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 650px) {
+  :root {
+    --fs-1: 2.25rem;
+  }
+  .container {
+    padding: 0 30px;
+  }
+  .navbar {
+    padding: 30px 0;
+  }
+  .blog .h2 {
+    position: relative;
+    text-align: 2rem;
+    padding-left: 2rem;
+  }
+  .blog .h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--action-primary);
+    width: 5px;
+    height: 100%;
+    border-radius: 5px;
+  }
+  .blog-text,
+  .profile-wrapper {
+    display: block;
+  }
+  .block-text {
+    color: var(--foreground-secondary);
+    font-size: var(--fs-4);
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .blog .wrapper-flex {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+  }
+  .profile-wrapper {
+    width: 56px;
+    height: 56px;
+    background: var(--action-primary);
+    padding: 3px;
+    border-radius: 50%;
+  }
+  .profile-wrapper img {
+    border-radius: 50%;
+  }
+  .blog .wrapper {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
+  footer.container {
+    padding: var(--py) 30px;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  footer .wrapper {
+    text-align: left;
+  }
+  .footer-text {
+    margin: 0;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 888px;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --fs-base: 1rem;
+    --fs-1: 3rem;
+  }
+}
+.container {
+  max-width: 1150px;
+}
+header .btn-group {
+  display: none;
+}
+header .flex-wrapper {
+  display: flex;
+  gap: 30px;
+}
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.desktop-nav .nav-link {
+  color: var(--foreground-secondary);
+  font-weight: 700;
+}
+.desktop-nav .nav-link:hover {
+  color: var(--accent);
+}
+.theme-btn-desktop {
+  position: relative;
+  background: var(--background-secondary);
+  color: var(--white);
+  width: 52px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+}
+.theme-btn-desktop.light {
+  background: linear-gradient(45deg, hsl(7, 100%, 71%) hsl(46, 100%, 65%));
+}
+.theme-btn-desktop.dark {
+  background: linear-gradient(45deg, hsl(225, 100%, 60%) hsl(296, 80%, 40%));
+}
+.theme-btn-desktop::before {
+  content: "";
+  position: absolute;
+  background: var(--white);
+  width: 21px;
+  height: 21px;
+  border-radius: 30px;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 10px -2px;
+  z-index: 2;
+}
+.theme-btn-desktop.dark::before {
+  left: calc(100% -24px);
+}
+.hero {
+  text-align: left;
+}
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+.hero .btn-group {
+  justify-content: start;
+  gap: 30px;
+}
+
+.hero .right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .pattern-bg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 200px;
+  background: url(./img/pattern.png);
+  background-size: contain;
+  opacity: 0.2;
+}
+.hero .img-box {
+  position: relative;
+  z-index: 2;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0 0 280px 230px;
+  transform: translate(10px, -10px);
+}
+.hero .shape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -42%) rotate(-20deg);
+}
+
+.hero .shape-1 {
+  background: var(--accent);
+  width: 90%;
+  height: 90%;
+  z-index: -1;
+}
+
+.hero .shape-2 {
+  width: 92%;
+  height: 92%;
+  box-shadow: inset 0 -30px 0 var(--action-primary);
+  z-index: 2;
+}
