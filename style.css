@@ -18,10 +18,10 @@
   --background-secondary: hsl(220, 26%, 14%);
   --action-primary: hsl(216, 15%, 52%);
   --action-secondary: hsl(218, 23%, 23%);
-  --foreground-primary: hsl(288, 59%, 73%);
-  --foreground-secondary: hsl(295, 15%, 57%);
+  --foreground-primary: hsl(288, 48%, 77%);
+  --foreground-secondary: hsl(295, 26%, 56%);
   --foreground-tertiary: hsl(300, 22%, 80%);
-  --accent: hsl(290, 59%, 34%);
+  --accent: hsl(290, 57%, 40%);
 }
 
 :root {
@@ -34,14 +34,12 @@
   --fs-4: 0.875rem;
   --fs-5: 0.75rem;
 
-  /** * spacing 
-  */
   --py: 5rem;
 }
-/* Reset */
+
 *,
-::before,
-::after {
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -49,11 +47,17 @@
 a {
   text-decoration: none;
 }
+li {
+  list-style: none;
+}
 img,
 button {
   display: block;
 }
-
+a,
+span {
+  display: inline-block;
+}
 button {
   font: inherit;
   border: none;
@@ -782,18 +786,6 @@ newsletter input::placeholder {
   margin-bottom: 0.3rem;
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 888px;
-  }
-}
-@media (min-width: 1024px) {
-  :root {
-    --fs-base: 1rem;
-    --fs-1: 3rem;
-  }
-}
-
 @media (min-width: 550px) {
   :root {
     --fs-base: 0.9rem;
@@ -804,22 +796,20 @@ newsletter input::placeholder {
     grid-template-columns: 3fr 4fr;
     gap: 20px;
   }
+
   .blog-card-banner {
     display: block;
     overflow: hidden;
     border-radius: 5px;
   }
+
   .blog-banner-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
-@media (min-width: 650px) {
-  :root {
-    --fs-1: 2.25rem;
-  }
-}
+
 @media only screen and (max-width: 500px) {
   .hero-img {
     display: none;
@@ -830,5 +820,24 @@ newsletter input::placeholder {
   }
   #logo {
     display: none;
+  }
+}
+
+@media (min-width: 650px) {
+  :root {
+    /**
+     * typography 
+     */
+
+    --fs-1: 2.25rem;
+  }
+}
+@media (min-width: 768px) {
+  /**
+     * REUSED STYLE 
+     */
+
+  .container {
+    max-width: 800px;
   }
 }
